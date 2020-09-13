@@ -2,7 +2,7 @@
 
 namespace MauticPlugin\MauticAdvancedTemplatesBundle\EventListener;
 use Mautic\CampaignBundle\Entity\Lead;
-use Mautic\CoreBundle\EventListener\CommonSubscriber;
+//use Mautic\CoreBundle\EventListener\CommonSubscriber;
 use Mautic\EmailBundle\EmailEvents;
 use Mautic\EmailBundle\Event as Events;
 use Mautic\EmailBundle\Helper\PlainTextHelper;

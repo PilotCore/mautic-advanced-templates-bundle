@@ -15,6 +15,11 @@ use Psr\Log\LoggerInterface;
  */
 class EmailSubscriber extends CommonStatsSubscriber
 {
+     /**
+     * @var LoggerInterface
+     */
+    protected $logger;
+
     /**
      * @var TokenHelper $tokenHelper ;
      */
@@ -26,10 +31,12 @@ class EmailSubscriber extends CommonStatsSubscriber
      *
      * @param TokenHelper $tokenHelper
      */
-    public function __construct(TemplateProcessor $templateProcessor)
+    public function __construct(TemplateProcessor $templateProcessor, LoggerInterface $logger)
     {
-        $this->templateProcessor = $templateProcessor;
+     	$this->templateProcessor = $templateProcessor;
+        $this->logger = $logger;
     }
+
     /**
      * @return array
      */
